@@ -1,0 +1,13 @@
+if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
+  zephyr_library_include_directories(${CMAKE_CURRENT_LIST_DIR})
+  zephyr_library_sources(custom_status_screen.c)
+  zephyr_library_sources(${ZMK_BASE}/app/boards/shields/nice_view/widgets/bolt.c)
+  zephyr_library_sources(${ZMK_BASE}/app/boards/shields/nice_view/widgets/util.c)
+
+  if(NOT CONFIG_ZMK_SPLIT OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+    zephyr_library_sources(${ZMK_BASE}/app/boards/shields/nice_view/widgets/status.c)
+  else()
+    zephyr_library_sources(widgets/peripheral_status.c)
+    zephyr_library_sources(${CMAKE_CURRENT_LIST_DIR}/../../../screen-assets/mountain_140x68.c)
+  endif()
+endif()
