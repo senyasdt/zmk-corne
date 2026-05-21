@@ -52,12 +52,32 @@
         tap-ms = <100>;
     };
 
-    combos {
-        compatible = "zmk,combos";
+        combos {
+            compatible = "zmk,combos";
 
         softoff {
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
+        };
+
+        lbkt {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <4 5>;
+        };
+
+        rbkt {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <7 8>;
+        };
+
+        lbrt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <18 17>;
+        };
+
+        rbrt {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <22 23>;
         };
     };
 
