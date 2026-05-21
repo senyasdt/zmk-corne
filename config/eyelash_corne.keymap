@@ -61,22 +61,22 @@
         };
 
         lbkt {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp LPAR>;
             key-positions = <4 5>;
         };
 
         rbkt {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp RPAR>;
             key-positions = <7 8>;
         };
 
         lbrt {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp LBKT>;
             key-positions = <18 17>;
         };
 
         rbrt {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp RBKT>;
             key-positions = <22 23>;
         };
     };
