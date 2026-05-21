@@ -17,7 +17,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/events/split_peripheral_status_changed.h>
 #include <zmk/usb.h>
 
-#include "../../nice_view/widgets/util.h"
 #include "peripheral_status.h"
 
 LV_IMG_DECLARE(mountain);

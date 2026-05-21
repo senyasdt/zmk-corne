@@ -4,7 +4,7 @@
  */
 
 #if !IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-#include "../nice_view/widgets/status.h"
+#include "widgets/status.h"
 #else
 #include "widgets/peripheral_status.h"
 #endif
