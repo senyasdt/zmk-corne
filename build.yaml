@@ -2,11 +2,11 @@
 include:
   - board: eyelash_corne_left
     shield: nice_view
-    artifact-name: eyelash_corne_left
+    artifact-name: nice_view_custom-eyelash_corne_left-zmk
 
   - board: eyelash_corne_right
     shield: nice_view
-    artifact-name: eyelash_corne_right
+    artifact-name: nice_view_custom-eyelash_corne_right-zmk
 
   - board: eyelash_corne_left
     shield: nice_view
@@ -16,8 +16,8 @@ include:
 
   - board: eyelash_corne_left
     shield: settings_reset
-    artifact-name: settings_reset-eyelash_corne_left
+    artifact-name: settings_reset-eyelash_corne_left-zmk
 
   - board: eyelash_corne_right
     shield: settings_reset
-    artifact-name: settings_reset-eyelash_corne_right
+    artifact-name: settings_reset-eyelash_corne_right-zmk
