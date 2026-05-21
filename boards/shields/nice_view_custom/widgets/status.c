@@ -5,29 +5,14 @@
  *
  */
 
-#include <math.h>
-#include <stdio.h>
-
 #include <zephyr/kernel.h>
-#include <zephyr/sys/util.h>
 
-#include <zephyr/logging/log.h>
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-
-#include <zmk/activity.h>
 #include <zmk/battery.h>
-#include <zmk/display.h>
-#include <zmk/events/activity_state_changed.h>
 #include <zmk/events/battery_state_changed.h>
-#include <zmk/events/ble_active_profile_changed.h>
-#include <zmk/events/ble_profile_cleared.h>
-#include <zmk/events/endpoint_changed.h>
-#include <zmk/events/layer_state_changed.h>
-#include <zmk/events/split_peripheral_status_changed.h>
 #include <zmk/events/usb_conn_state_changed.h>
-#include <zmk/event_manager.h>
 #include <zmk/usb.h>
-#include <zmk/wpm.h>
+#include <zmk/display.h>
+#include <zmk/event_manager.h>
 
 #include "status.h"
 
