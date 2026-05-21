@@ -1,15 +1,15 @@
 ---
 include:
   - board: eyelash_corne_left
-    shield: nice_view nice_custom
+    shield: nice_view
     artifact-name: nice_view_custom-eyelash_corne_left-zmk
 
   - board: eyelash_corne_right
-    shield: nice_view nice_custom
+    shield: nice_view
     artifact-name: nice_view_custom-eyelash_corne_right-zmk
 
   - board: eyelash_corne_left
-    shield: nice_view nice_custom
+    shield: nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: eyelash_corne_studio_left
