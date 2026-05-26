@@ -152,10 +152,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1                                &kp F2             &kp F3            &kp F4      &kp F5                                  &mmv MOVE_UP                     &kp F6                &kp F7         &kp F8     &kp F9     &kp F10          &kp F11
-&trans  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp K_VOLUME_DOWN  &kp K_PLAY_PAUSE  &kp K_MUTE  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
-&trans  &kp C_AL_SCREENSAVER                  &trans             &trans            &trans      &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans                &trans         &trans     &trans     &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                                                 &trans            &trans      &trans                                                                   &trans                &trans         &trans
+&trans  &kp F1                            &kp F2             &kp F3            &kp F4      &kp F5                                  &mmv MOVE_UP                     &kp F6                &kp F7         &kp F8     &kp F9     &kp F10          &kp F11
+&trans  &kp C_KEYBOARD_INPUT_ASSIST_NEXT  &kp K_VOLUME_DOWN  &kp K_PLAY_PAUSE  &kp K_MUTE  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp C_BRIGHTNESS_INC  &kp C_BRI_DEC  &mkp MCLK  &mkp RCLK  &kp PRINTSCREEN  &kp F12
+&trans  &kp C_AL_SCREENSAVER              &trans             &trans            &trans      &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans                &trans         &trans     &trans     &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                                             &trans            &trans      &trans                                                                   &trans                &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -163,9 +163,9 @@
 
         layer_5 {
             bindings = <
-&trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                    &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE   &kp C_PLAY_PAUSE
-&trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22            &trans  &trans  &trans  &trans                &trans                &trans             &trans           &trans       &trans
-&trans  &kp F23  &kp F24  &trans   &trans   &trans   &trans            &trans          &trans                &trans                &trans             &trans           &kt C_SLEEP  &kp K_SCREENSAVER
+&trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                    &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp C_MUTE   &kp C_PLAY_PAUSE
+&trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22            &trans  &trans  &trans  &trans                &trans                &trans             &trans                &trans       &trans
+&trans  &kp F23  &kp F24  &trans   &trans   &trans   &trans            &trans          &kp K_COFFEE          &kp K_LOCK            &kp K_SCREENSAVER  &kp C_AL_SCREENSAVER  &kt K_SLEEP  &kp C_AL_SCREEN_SAVER
                           &trans   &trans   &trans                                     &trans                &trans                &trans
             >;
 
