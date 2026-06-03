@@ -4,6 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: urob
+      url-base: https://github.com/urob     
+    - name: ssbb
+      url-base: https://github.com/ssbb
+    - name: rafaelromao
+      url-base: https://github.com/rafaelromao
       # Additional modules containing boards/shields/custom code can be listed here as well.
       # See:
       # - https://zmk.dev/docs/features/modules
@@ -19,5 +25,20 @@ manifest:
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.3
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3  
+    - name: zmk-leader-key
+      remote: urob
+      revision: v0.3
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
+    - name: zmk-layer-morph
+      remote: rafaelromao
+      revision: v0.3
   self:
     path: config
