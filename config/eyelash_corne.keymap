@@ -31,6 +31,22 @@
 
 / {
     behaviors {
+        smart_num_nav: smart_num_nav {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&nav_word>, <&num_word>;
+            display-name = "Smart Num/Nav";
+        };
+
+        nav_word: nav_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END>;
+            ignore-modifiers;
+        };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -321,7 +337,7 @@
 &kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp UP                &kp Y         &kp U  &kp I         &kp O    &kp P     &del_behavior
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H         &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C     &kp V  &kp B      &kp SPACE              &kp DOWN              &kp N         &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                              &kp LGUI  &num_word 8  &kp SPACE                                         &lt 13 ENTER  &mo 7  &kp LEFT_ALT
+                              &kp LGUI  &smart_num_nav 9 8  &kp SPACE                               &lt 13 ENTER  &none  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -390,7 +406,7 @@
 &kp TAB    &kp B  &kp L  &kp D     &kp W  &kp Z                        &trans          &kp MINUS  &kp F    &kp O     &kp U      &kp J           &kp BSPC
 &kp LSHFT  &kp N  &kp R  &kp T     &kp S  &kp G                &trans  &trans  &trans  &kp Y      &kp H    &kp A     &kp E      &kp I           &kp SEMI
 &kp LCTRL  &kp Q  &kp X  &kp M     &kp C  &kp V      &trans            &trans          &kp K      &kp P    &kp DOT   &kp COMMA  &dot_overwrite  &kp ESC
-                         &kp LGUI  &mo 7  &kp SPACE                                    &kp ENTER  &tog 13  &kp LALT
+                         &kp LGUI  &none  &kp SPACE                                      &kp ENTER  &tog 13  &kp LALT
             >;
 
             label = "BASE";
