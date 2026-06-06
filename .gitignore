@@ -5,3 +5,5 @@ tools/
 .west/
 
 .zmk/
+.codex
+config/.codex
