@@ -47,6 +47,21 @@
             ignore-modifiers;
         };
 
+        win_word: win_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <
+                SEMICOLON LEFT_BRACKET RIGHT_BRACKET
+                O M
+                N1 N2 N3 N4 N5 N6 N7 N8 N9
+                H J K L T
+                Q P I
+                X Y
+                MINUS PLUS
+            >;
+            ignore-modifiers;
+        };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -250,7 +265,7 @@
         };
 
         to_win {
-            bindings = <&sl 10>;
+            bindings = <&win_word 10>;
             key-positions = <16 24>;
         };
     };
@@ -448,9 +463,9 @@
 
         win_manager {
             bindings = <
-&trans  &trans                         &kp RA(SEMICOLON)                    &kp LA(LEFT_BRACKET)           &kp LA(RIGHT_BRACKET)          &trans                                     &trans          &trans                 &kp LA(TAB)                &mt LC(LA(TAB)) TAB    &trans                  &trans                     &trans
-&trans  &mt (LA(LS(N1))) LA(NUMBER_1)  &mt (LA(N2)) LA(NUMBER_2)            &mt (LA(LS(N3))) LA(NUMBER_3)  &mt (LA(LS(N4))) LA(NUMBER_4)  &mt (LS(LA(N9))) LA(N9)            &trans  &trans  &trans  &mt (LS(LA(H))) LA(H)  &mt (LA(LS(J))) LA(J)      &mt (LA(LS(K))) LA(K)  &mt (LA(LS(L))) LA(N9)  &mt (LA(LS(T))) LA(LS(F))  &trans
-&trans  &mt (LA(LS(N5))) LA(N5)        &mt (LA(LS(NUMBER_6))) LA(NUMBER_6)  &mt (LA(LS(N7))) LA(N7)        &mt (LA(LS(N8))) LA(N8)        &trans                   &trans            &trans          &trans                 &mt (LA(LS(C))) LA(LS(B))  &mt (LA(MINUS)) LA(X)  &mt (LA(PLUS)) LA(Y)    &mt (LA(P)) LA(LS(I))      &trans
+&trans  &trans                         &kp LA(SEMICOLON)                    &mt (LA(LS(LEFT_BRACKET))) LA(LEFT_BRACKET)   &mt (LA(LS(RIGHT_BRACKET))) LA(RIGHT_BRACKET)  &trans  &trans  &trans  &mt (LA(LS(O))) LA(O)  &mt (LA(LS(M))) LA(M)  &trans                  &trans                     &trans
+&trans  &mt (LA(LS(N1))) LA(NUMBER_1)  &mt (LA(LS(N2))) LA(NUMBER_2)        &mt (LA(LS(N3))) LA(NUMBER_3)                  &mt (LA(LS(N4))) LA(NUMBER_4)                  &mt (LS(LA(N9))) LA(N9)  &trans  &trans  &trans  &mt (LS(LA(H))) LA(H)  &mt (LA(LS(J))) LA(J)  &mt (LA(LS(K))) LA(K)  &mt (LA(LS(L))) LA(L)  &mt (LA(LS(F))) LA(T)  &trans
+&trans  &mt (LA(LS(N5))) LA(N5)        &mt (LA(LS(NUMBER_6))) LA(NUMBER_6)  &mt (LA(LS(N7))) LA(N7)                        &mt (LA(LS(N8))) LA(N8)                        &trans                   &trans            &trans          &trans                 &mt (LA(LS(R))) LA(Q)  &mt (LA(MINUS)) LA(X)  &mt (LA(PLUS)) LA(Y)    &mt (LA(I)) LA(P)      &trans
                                                                             &trans                         &mo 14                         &trans                                                     &trans                 &trans                     &trans
             >;
 
