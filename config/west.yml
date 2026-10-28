@@ -17,28 +17,53 @@ manifest:
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
-      revision: main
+      revision: 904bf0d97ab188412cd7e0d8644187ee9b67a03f
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: edf5c0814fd3ea202e43aad2d68fd32e882a518c
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
-      revision: main
+      revision: 46f824abb2bd41f1287c5c68abd14122af6042a3
     - name: zmk-auto-layer
       remote: urob
-      revision: v0.3
+      revision: b31aa0a357343535a56d535edd0c2ad64d3d7230
     - name: zmk-adaptive-key
       remote: urob
-      revision: v0.3  
+      revision: 01ccc22889714f276c930dc960a989f80c9e0680
     - name: zmk-leader-key
       remote: urob
-      revision: v0.3
+      revision: 99ba80034b44dcad233b2c4bbe97757d9d26d3fd
     - name: zmk-listeners
       remote: ssbb
-      revision: v1
+      revision: c240ceaf353d3138bea7695eef17049b7ade995b
     - name: zmk-layer-morph
       remote: rafaelromao
-      revision: v0.3
+      revision: ded7aedea7b7645a68109b08d603eaa0ee090db9
+    # Exact Zephyr revision and the ZMK v0.3.0 import filter used for validation.
+    - name: zephyr
+      remote: zmkfirmware
+      revision: dacab4875df72109b96cc8977547a0dc04875bcd
+      clone-depth: 1
+      import:
+        name-blocklist:
+        - ci-tools
+        - hal_altera
+        - hal_cypress
+        - hal_infineon
+        - hal_microchip
+        - hal_nxp
+        - hal_openisa
+        - hal_silabs
+        - hal_xtensa
+        - hal_st
+        - hal_ti
+        - loramac-node
+        - mcuboot
+        - mcumgr
+        - net-tools
+        - openthread
+        - edtt
+        - trusted-firmware-m
   self:
     path: config
